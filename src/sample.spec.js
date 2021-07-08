@@ -1,6 +1,6 @@
 const { linearSearch, binarySearch } = require('./sample');
 
-describe('Linear search', () => {
+describe('Linear Search', () => {
   it('Should return the index of the element to find in the array', () => {
     const spec = (elementToFind, array, expectedResult) => {
       const result = linearSearch(elementToFind, array);
@@ -15,7 +15,7 @@ describe('Linear search', () => {
   });
 });
 
-describe('Binary search', () => {
+describe('Binary Search', () => {
   it('Should return the index of the element to find in the array', () => {
     const spec = (elementToFind, array, expectedResult) => {
       const result = binarySearch(elementToFind, array);
