@@ -28,10 +28,6 @@ const binarySearch = (elementToFind, array) => {
       return pivot;
     }
 
-    if (startIndex === endIndex) {
-      return -1;
-    }
-
     return elementToFind < array[pivot]
       ? recursiveBinarySearch(startIndex, pivot - 1)
       : recursiveBinarySearch(pivot + 1, endIndex);
@@ -44,8 +40,30 @@ const binarySearch = (elementToFind, array) => {
   return recursiveBinarySearch(0, array.length - 1);
 };
 
+const iterativeBinarySearch = (elementToFind, array) => {
+  let startIndex = 0;
+  let endIndex = array.length - 1;
+
+  while (startIndex <= endIndex) {
+    const pivot = parseInt((startIndex + endIndex) / 2);
+
+    if (array[pivot] === elementToFind) {
+      return pivot;
+    }
+
+    if (elementToFind < array[pivot]) {
+      endIndex = pivot - 1;
+    } else {
+      startIndex = pivot + 1;
+    }
+  }
+
+  return -1;
+};
+
 module.exports = {
   factorial,
   linearSearch,
   binarySearch,
+  iterativeBinarySearch,
 };
