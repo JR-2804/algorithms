@@ -1,0 +1,14 @@
+{
+  "name": "algorithms",
+  "version": "1.0.0",
+  "description": "A project for testing algorithms",
+  "author": "JR",
+  "license": "ISC",
+  "scripts": {
+    "test": "jest --watch"
+  },
+  "dependencies": {
+    "jest": "^26.6.3",
+    "prettier": "^2.3.1"
+  }
+}
