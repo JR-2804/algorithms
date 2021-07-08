@@ -3,6 +3,7 @@ const {
   binarySearch,
   iterativeBinarySearch,
   bubbleSort,
+  selectionSort,
 } = require('./sample');
 
 describe('Linear Search', () => {
@@ -58,6 +59,22 @@ describe('Bubble Sort', () => {
   it('Should sort the array', () => {
     const spec = (array, expectedResult) => {
       const result = bubbleSort(array);
+
+      expect(result).toEqual(expectedResult);
+    };
+
+    spec([], []);
+    spec([1], [1]);
+    spec([1, 1], [1, 1]);
+    spec([2, 1, 3], [1, 2, 3]);
+    spec([5, 4, 3, 2, 1], [1, 2, 3, 4, 5]);
+  });
+});
+
+describe('Selection Sort', () => {
+  it('Should sort the array', () => {
+    const spec = (array, expectedResult) => {
+      const result = selectionSort(array);
 
       expect(result).toEqual(expectedResult);
     };

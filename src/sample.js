@@ -74,10 +74,28 @@ const bubbleSort = (array) => {
   return array;
 };
 
+const selectionSort = (array) => {
+  for (let i = 0; i < array.length; i++) {
+    let smallestIndex = i;
+    for (let j = i + 1; j < array.length; j++) {
+      if (array[j] < array[smallestIndex]) {
+        smallestIndex = j;
+      }
+    }
+
+    const temp = array[i];
+    array[i] = array[smallestIndex];
+    array[smallestIndex] = temp;
+  }
+
+  return array;
+};
+
 module.exports = {
   factorial,
   linearSearch,
   binarySearch,
   iterativeBinarySearch,
   bubbleSort,
+  selectionSort,
 };
