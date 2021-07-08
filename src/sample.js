@@ -18,6 +18,10 @@ const linearSearch = (elementToFind, array) => {
 
 const binarySearch = (elementToFind, array) => {
   const recursiveBinarySearch = (startIndex, endIndex) => {
+    if (startIndex > endIndex) {
+      return -1;
+    }
+
     const pivot = parseInt((endIndex + startIndex) / 2);
 
     if (array[pivot] === elementToFind) {
