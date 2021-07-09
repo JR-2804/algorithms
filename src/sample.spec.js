@@ -1,10 +1,10 @@
-const {
+import {
   linearSearch,
   binarySearch,
   iterativeBinarySearch,
   bubbleSort,
   selectionSort,
-} = require('./sample');
+} from './sample';
 
 describe('Linear Search', () => {
   it('Should return the index of the element to find in the array', () => {

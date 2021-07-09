@@ -91,7 +91,7 @@ const selectionSort = (array) => {
   return array;
 };
 
-module.exports = {
+export {
   factorial,
   linearSearch,
   binarySearch,
