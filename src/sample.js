@@ -16,51 +16,6 @@ const linearSearch = (elementToFind, array) => {
   return -1;
 };
 
-const binarySearch = (elementToFind, array) => {
-  const recursiveBinarySearch = (startIndex, endIndex) => {
-    if (startIndex > endIndex) {
-      return -1;
-    }
-
-    const pivot = parseInt((endIndex + startIndex) / 2);
-
-    if (array[pivot] === elementToFind) {
-      return pivot;
-    }
-
-    return elementToFind < array[pivot]
-      ? recursiveBinarySearch(startIndex, pivot - 1)
-      : recursiveBinarySearch(pivot + 1, endIndex);
-  };
-
-  if (array.length === 0) {
-    return -1;
-  }
-
-  return recursiveBinarySearch(0, array.length - 1);
-};
-
-const iterativeBinarySearch = (elementToFind, array) => {
-  let startIndex = 0;
-  let endIndex = array.length - 1;
-
-  while (startIndex <= endIndex) {
-    const pivot = parseInt((startIndex + endIndex) / 2);
-
-    if (array[pivot] === elementToFind) {
-      return pivot;
-    }
-
-    if (elementToFind < array[pivot]) {
-      endIndex = pivot - 1;
-    } else {
-      startIndex = pivot + 1;
-    }
-  }
-
-  return -1;
-};
-
 const bubbleSort = (array) => {
   for (let i = 0; i < array.length; i++) {
     for (let j = i + 1; j < array.length; j++) {
@@ -91,11 +46,4 @@ const selectionSort = (array) => {
   return array;
 };
 
-export {
-  factorial,
-  linearSearch,
-  binarySearch,
-  iterativeBinarySearch,
-  bubbleSort,
-  selectionSort,
-};
+export { factorial, linearSearch, bubbleSort, selectionSort };
