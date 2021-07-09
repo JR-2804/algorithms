@@ -1,4 +1,4 @@
-import { iterativeBinarySearch, recursiveBinarySearch } from './algorithms';
+import { iterativeBinarySearch, recursiveBinarySearch } from './binary-search';
 
 describe('Iterative Binary Search', () => {
   it('should find the index of the element in the array', () => {
