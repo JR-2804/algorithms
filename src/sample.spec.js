@@ -4,7 +4,22 @@ import {
   iterativeBinarySearch,
   bubbleSort,
   selectionSort,
+  factorial,
 } from './sample';
+
+describe('Factorial', () => {
+  it('Should return the factorial of the number', () => {
+    const spec = (number, expectedResult) => {
+      const result = factorial(number);
+      expect(result).toBe(expectedResult);
+    };
+
+    spec(1, 1);
+    spec(2, 2);
+    spec(3, 6);
+    spec(10, 3628800);
+  });
+});
 
 describe('Linear Search', () => {
   it('Should return the index of the element to find in the array', () => {
